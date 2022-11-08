@@ -1,0 +1,42 @@
+* { /*css reset (elemina los valores q html pone x defecto)*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.container {
+    border: 1px solid black;
+    height: 1450px;
+    position: relative; /*tb se pone en el contenedor padre*/
+}
+
+.element {
+    background-color: grey;
+    padding: 10px;
+}
+
+.main-element {
+    background-color: yellow;
+    padding: 10px;
+    
+    /*posicion estatica, el elemento no se mueve para nada,todos los elementos tienen esta posicion x defecto*/
+
+    /*position: relative; /*permite usar top, bottom, rigth y left y se mueve en base a la posicion original del elemento*/
+
+    /*position: absolute; se mueve en base del elemento padre, ignorando los elementos de alrededor, 
+    como si flotara x encima de los otros,, conteinedor padre debe tener position relativa*/
+
+    /*position: fixed; no se mueve, ni se ve afectada x el scroll, queda fijo*/
+
+    position: sticky; /*va a tener la posicion original del elemento y al hacer scroll no se verá afectada, 
+    se movera en conjunto (aparece barra del lado derecho para mover pag arriba y abajo)*/
+
+    top: 10px; /*top, bottom, left, rigth*/
+    left: 20px;
+
+    /*z-index: 2; /*superpone, entre mas alto sea el numero, será la prioridad en la capa y se verá mas al frente*/
+
+    /*diferencia entre fixed y sticky... fixed ignora los elementos de al rededor y no se mueve, 
+    queda fijo el elemento al q se le puso.. */
+}
+
